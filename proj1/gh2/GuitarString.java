@@ -29,7 +29,6 @@ public class GuitarString {
                 buffer.addLast(0.0);
             }
 
-//
     }
 
 
@@ -49,9 +48,8 @@ public class GuitarString {
      */
     public void tic() {
         double removeitem = buffer.removeFirst();
-//            double newdouble = (removeitem + buffer.get(0)) / 2 * DECAY;
-//            buffer.addLast(newdouble);
-//
+        double newdouble = (removeitem + buffer.get(0)) / 2 * DECAY;
+        buffer.addLast(newdouble);
     }
 
     /* Return the double at the front of the buffer. */
