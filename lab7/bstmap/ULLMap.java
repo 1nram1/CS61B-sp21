@@ -41,13 +41,13 @@ public class ULLMap<K, V>  implements Map61B<K, V> {
         if (list != null) {
             Entry lookup = list.get(key);
             if (lookup == null) {
-                list = new Entry(key, val, list);
+                list = new Entry(key, val, list);// addfirst
             } else {
                 lookup.val = val;
             }
         } else {
             list = new Entry(key, val, list);
-            size = size + 1;
+            size = size + 1;//不写在外面？
         }
     }
 
@@ -91,6 +91,7 @@ public class ULLMap<K, V>  implements Map61B<K, V> {
                 return null;
             }
             return next.get(key);
+            //recursive get method awesome
         }
 
         /** Stores the key of the key-value pair of this node in the list. */
