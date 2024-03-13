@@ -59,7 +59,7 @@ public class BSTMap<K extends Comparable<K>, V> implements Map61B<K,V>
         size = 0;
     }
     @Override
-    public void clear(){
+    public void clear() {
         size = 0;
         sentinel = null;
     }
@@ -153,9 +153,19 @@ private BSTnode puthelper (BSTnode T , K key,V value) {
      * If you don't implement this, throw an UnsupportedOperationException. */
     @Override
     public Set<K> keySet(){
-        throw new UnsupportedOperationException();
-        //HashSet <K> set =new HashSet<>() ;
+        //throw new UnsupportedOperationException();
+        HashSet <K> set =new HashSet<>() ;
+        KeySetHelper(sentinel , set) ;
+        return set;
+    }
 
+    private void KeySetHelper(BSTnode T , Set<K> set) {
+        if (T == null) {
+            return;
+        }
+        set.add(T.key);
+        KeySetHelper(T.leftchild , set);
+        KeySetHelper(T.rightchild , set);
     }
 
     /* Removes the mapping for the specified key from this map if present.
