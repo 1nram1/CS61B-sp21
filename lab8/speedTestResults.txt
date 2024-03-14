@@ -1,0 +1,34 @@
+Enter # strings to insert into each map: 100000
+class hashmap.MyHashMapALBuckets: 1.69 sec
+class hashmap.MyHashMapLLBuckets: 2.94 sec
+class hashmap.MyHashMapTSBuckets: 4.76 sec
+class hashmap.MyHashMapHSBuckets: 6.31 sec
+class hashmap.MyHashMapPQBuckets: 3.27 sec
+
+Enter # strings to insert into each map: 50000
+class hashmap.MyHashMapALBuckets: 0.44 sec
+class hashmap.MyHashMapLLBuckets: 0.91 sec
+class hashmap.MyHashMapTSBuckets: 1.44 sec
+class hashmap.MyHashMapHSBuckets: 1.39 sec
+class hashmap.MyHashMapPQBuckets: 0.93 sec
+
+
+
+Enter # strings to insert into hashmap.ULLMap: 90000
+--Stack Overflow -- couldn't add 90000 strings.
+
+Enter # strings to insert into hashmap.MyHashMap: 90000
+class hashmap.MyHashMap: 3.85 sec
+
+Enter # strings to insert into Java's HashMap: 90000
+Java's Built-in HashMap: 0.02 sec
+
+
+Enter # strings to insert into hashmap.ULLMap: 50000
+--Stack Overflow -- couldn't add 50000 strings of length 7.
+
+Enter # strings to insert into your hashmap.MyHashMap: 50000
+class hashmap.MyHashMap: 1.03 sec
+
+Enter # strings to insert into Java's HashMap: 50000
+Java's Built-in HashMap: 0.01 sec
