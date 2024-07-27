@@ -197,8 +197,8 @@ public class MyHashMap<K, V> implements Map61B<K, V> {
     public Set<K> keySet() {
         HashSet<K> set = new HashSet<>();
         for (Collection<Node> bucket : buckets) {
-            for (Node node : bucket) {
-                set.add(node.key);
+                    for (Node node : bucket) {
+                        set.add(node.key);
             }
         }
         //双重遍历去遍历每一个结点
